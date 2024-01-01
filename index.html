@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="progress">
+        <div class="inner"></div>
+    </div>
+
+    <style>
+        .progress{
+            background-color: white;
+            width: 20rem;
+            height: 0.25rem;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .progress .inner{
+            background-color: rgb(255, 51, 153);
+            height: 100%;
+            transform-origin: left;
+            animation: progress 1s infinite;
+        }
+        @keyframes progress {
+            from{ transform: scaleX(5%) translateX(-5%); }
+            to{ transform: scaleX(75%) translateX(130%); }
+        }
+        body{
+            display: grid;
+            place-items: center;
+            height: 95vh;
+            background-color: rgb(17, 17, 17);
+        }
+    </style>
+</body>
+</html>
